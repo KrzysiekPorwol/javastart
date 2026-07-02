@@ -1,13 +1,16 @@
 public class HelloWorld {
   public static void main(String[] args) {
-  String markaSamochodu = "Toyota";
-  var model = "Celica";
-  int rocznik = 45;
-  double cena = 19999.99;
+    final String url = "https://javastart.pl";
+    System.out.print("Strona, z której uczę się Javy to: ");
+    System.out.println(url);
 
-  System.out.println(markaSamochodu);
-  System.out.println(model);
-  System.out.println(rocznik);
-  System.out.println(cena);
+    int kevinYear = 1990;
+    System.out.print("Film Kevin sam w domu został wydany w roku: ");
+    System.out.println(kevinYear);
+
+    var voterTurnout = 58d;
+    voterTurnout = 61.1;
+    System.out.print("Procentowa frekwencja podczas ostatnich wyborów wyniosła: ");
+    System.out.println(voterTurnout);
   }
 }
