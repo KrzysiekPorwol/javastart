@@ -1,11 +1,13 @@
 public class HelloWorld {
   public static void main(String[] args) {
-    System.out.println("Mam Audi A4");
-    System.out.println("Rocznik:");
-    System.out.println(2004);
-    System.out.println("Silnik o pojemności:");
-    System.out.println(2.0);
+  String markaSamochodu = "Toyota";
+  var model = "Celica";
+  int rocznik = 45;
+  double cena = 19999.99;
+
+  System.out.println(markaSamochodu);
+  System.out.println(model);
+  System.out.println(rocznik);
+  System.out.println(cena);
   }
 }
-
-
