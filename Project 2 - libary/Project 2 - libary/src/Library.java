@@ -1,27 +1,21 @@
 public class Library {
   public static void main(String[] args) {
-    int cenaChlebaNetto = 7;
-    double vat = 0.23;
-    double vatChleba = cenaChlebaNetto * vat;
-    System.out.println("Cena chleba netto: " + cenaChlebaNetto);
-    System.out.println("Wysokość podatku vat dla chleba: " + vatChleba);
-    System.out.print("Cena chleba brutto: ");
-    System.out.println(cenaChlebaNetto + vatChleba);
+    final String appName = "Biblioteka v0.1";
+
+    String title = "W pustyni i w puszczy";
+    String author = "Henryk Sienkiewicz";
+    int releaseDate = 2010;
+    int pages = 296;
+    String publisher = "Greg";
+    String isbn = "9788373271890";
+
+    System.out.println(appName);
+    System.out.println("Książki dostępne w bibliotece:");
+    System.out.println(title);
+    System.out.println(author);
+    System.out.println(releaseDate);
+    System.out.println(pages);
+    System.out.println(publisher);
+    System.out.println(isbn);
   }
 }
-
-//Ceny produktów w sklepach wyrażane są jako kwoty brutto.
-// Na cenę taką składa się cena netto oraz podatek VAT.
-// Przykładowo jeżeli cena netto produktu wynosi 100zł,
-// a podatek VAT dla tego towaru wynosi 23%, to cena brutto
-// wyniesie 123 zł, ponieważ 100 + 100*0,23 = 123.
-//
-//Napisz program, w którym do zmiennej przypiszesz liczbę,
-// która będzie oznaczała cenę netto pewnego towaru.
-// Do drugiej zmiennej przypisz wartość, która będzie
-// wyrażała wysokość stawki VAT (np. 0.23 będzie odpowiadało stawce 23% VAT).
-//
-//Przypisz do zmiennych przykładowe wartości, a następnie oblicz i
-// wyświetl kwotę netto, wysokość podatku VAT dla tego produktu,
-// oraz kwotę brutto do zapłaty za towar. Możesz definiować w
-// programie dowolne dodatkowe zmienne, jeżeli uznasz to za pomocne.
