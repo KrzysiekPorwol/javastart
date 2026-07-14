@@ -5,4 +5,21 @@ public class Book {
   int pages;
   String publisher;
   String isbn;
+
+  Book(String newTitle, String newAuthor, int newReleaseDate,
+       int newPages, String newPublisher, String newIsbn) {
+
+    title = newTitle;
+    author = newAuthor;
+    releaseDate = newReleaseDate;
+    pages = newPages;
+    publisher = newPublisher;
+    isbn = newIsbn;
+  }
+
+  void printInfo() {
+    String printInfo = title + " | " + author + " | " + releaseDate  + " | "
+          + pages  + " | " + publisher  + " | " + isbn;
+    System.out.println(printInfo);
+  }
 }
