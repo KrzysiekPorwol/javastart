@@ -7,41 +7,35 @@ public class House {
     energyReserve = newEnergyReserve;
   }
 
-  double takeShower() {
+  void takeShower() {
     System.out.println("Bierzemy prysznic");
     waterSupply = waterSupply - 48;
-    return waterSupply;
   }
 
-  double takeBath() {
+  void takeBath() {
     System.out.println("Bierzemy kąpiel");
     waterSupply = waterSupply - 86;
-    return waterSupply;
   }
 
-  double makeDinner() {
+  void makeDinner() {
     System.out.println("Robimy obiad");
     energyReserve = energyReserve - 0.1;
     waterSupply = waterSupply - 4;
-    return waterSupply + energyReserve;
   }
 
-  double boilWater() {
+  void boilWater() {
     System.out.println("Podgrzewamy wodę");
     energyReserve = energyReserve - 0.05;
     waterSupply = waterSupply - 0.5;
-    return waterSupply + energyReserve;
   }
 
-  double watchTv(int time) {
+  void watchTv(int time) {
     System.out.println("Oglądamy telewizję przez " + time + "godzin/y");
     energyReserve = energyReserve - 0.06 * time;
-    return energyReserve;
   }
 
-  void houseInfo() {
-    System.out.println("Oto zasoby Twojego domu: ");
-    System.out.println("Ilosc zapasu wody: " + waterSupply + " Ilosc zapasu ropy: " + energyReserve);
+  String houseInfo() {
+   return "Oto zasoby Twojego domu: Ilosc zapasu wody: " + waterSupply + " Ilosc zapasu ropy: " + energyReserve;
   }
 }
 
