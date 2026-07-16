@@ -1,3 +1,5 @@
+package data;
+
 public class Book {
   String title;
   String author;
@@ -6,7 +8,7 @@ public class Book {
   String publisher;
   String isbn;
 
-  Book(String newTitle, String newAuthor, int newReleaseDate,
+ public Book(String newTitle, String newAuthor, int newReleaseDate,
        int newPages, String newPublisher, String newIsbn) {
 
     title = newTitle;
@@ -17,7 +19,7 @@ public class Book {
     isbn = newIsbn;
   }
 
-  void printInfo() {
+ public void printInfo() {
     String printInfo = title + " | " + author + " | " + releaseDate  + " | "
           + pages  + " | " + publisher  + " | " + isbn;
     System.out.println(printInfo);
