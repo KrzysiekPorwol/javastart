@@ -5,13 +5,15 @@ public class Customer {
   String firstName;
   private String lastName;
   private int age;
-  private int ticketId;
 
-  public Customer(String firstName, String lastName, int age, int ticketId) {
+  public Customer(String firstName, String lastName, int age) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
-    this.ticketId = ticketId;
+  }
+
+  public String getFullName() {
+    return firstName + " " + lastName;
   }
 
   public String getFirstName() {
@@ -36,14 +38,6 @@ public class Customer {
 
   public void setAge(int age) {
     this.age = age;
-  }
-
-  public int getTicketId() {
-    return ticketId;
-  }
-
-  public void setTicketId(int ticketId) {
-    this.ticketId = ticketId;
   }
 }
 

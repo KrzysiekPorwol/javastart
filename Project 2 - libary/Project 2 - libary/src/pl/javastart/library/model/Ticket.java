@@ -1,15 +1,19 @@
 package pl.javastart.library.model;
 
 public class Ticket {
-  private String ticketPersonData;
-  private String ticketMovieTitle;
   private int ticketId;
+  private Customer customer;
+  private Movie movie;
 
 
-  public Ticket(String ticketMovieTitle, String ticketPersonData, int ticketId) {
-    this.ticketMovieTitle = ticketMovieTitle;
-    this.ticketPersonData = ticketPersonData;
+  public Ticket(int ticketId, Movie movie, Customer customer) {
     this.ticketId = ticketId;
+    this.movie = movie;
+    this.customer = customer;
+  }
+
+  public String getInfo() {
+    return ticketId + " | " + movie.getMovieInfo() + " | " + customer.getFullName();
   }
 
   public int getTicketId() {
@@ -20,19 +24,19 @@ public class Ticket {
     this.ticketId = ticketId;
   }
 
-  public String getTicketPersonData() {
-    return ticketPersonData;
+  public Movie getMovie() {
+    return movie;
   }
 
-  public void setTicketPersonData(String ticketPersonData) {
-    this.ticketPersonData = ticketPersonData;
+  public void setMovie(Movie movie) {
+    this.movie = movie;
   }
 
-  public String getTicketMovieTitle() {
-    return ticketMovieTitle;
+  public Customer getCustomer() {
+    return customer;
   }
 
-  public void setTicketMovieTitle(String ticketMovieTitle) {
-    this.ticketMovieTitle = ticketMovieTitle;
+  public void setCustomer(Customer customer) {
+    this.customer = customer;
   }
 }

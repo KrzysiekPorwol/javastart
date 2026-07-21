@@ -7,28 +7,23 @@ import pl.javastart.library.model.Ticket;
 
 class CinemaSystem {
   public static void main(String[] args) {
-    Movie movie1 = new Movie("Omen", "horror",
-          128, 16, 72, 72);
-    Customer customer1 = new Customer("Krzysztof", "Porwoł", 28, 1);
-    BuyTicket buyTicket1 = new BuyTicket();
+    Movie movie1 = new Movie("Omen", "horror", 128, 16, 72, 72);
+    Customer customer1 = new Customer("Krzysztof", "Porwoł", 28);
+    BuyTicket buyTicket = new BuyTicket();
+    Ticket ticket1 = buyTicket.BuyTicket(movie1, customer1);
 
-    buyTicket1.buyTicket(movie1, customer1);
+    Customer customer2 = new Customer("Kacper", "Wajsman", 17);
+    Ticket ticket2 = buyTicket.BuyTicket(movie1, customer2);
 
-    Customer customer2 = new Customer("Kacper", "Wajsman", 15, 2);
-    buyTicket1.buyTicket(movie1, customer2);
+    System.out.println("Sprzedane bilety");
+    if (ticket1 != null) {
+      System.out.println(ticket1.getInfo());
+    }
+    if (ticket2 != null) {
+      System.out.println(ticket2.getInfo());
+    }
 
-
-
-//
-//      System.out.println("Sprzedane bilety");
-//    if (ticket1Id != 0) {
-//      System.out.println(ticket1Id + " | " + ticket1PersonData + " | " + ticket1MovieTitle + " - " + movieType + " - " + movieTime + "min");
-//    }
-//    if (ticket2Id != 0) {
-//      System.out.println(ticket2Id + " | " + ticket2PersonData + " | " + ticket2MovieTitle + " - " + movieType + " - " + movieTime + "min");
-//    }
-//
-//    System.out.println("Liczba pozostałych miejsc: " + freeSeats);
-//    System.out.println("Liczba sprzedanych biletów: " + (maxSeats - freeSeats));
+    System.out.println("Liczba pozostałych miejsc: " + movie1.getFreeSeats());
+    System.out.println("Liczba sprzedanych biletów: " + (movie1.getMaxSeats() - movie1.getFreeSeats()));
   }
 }
