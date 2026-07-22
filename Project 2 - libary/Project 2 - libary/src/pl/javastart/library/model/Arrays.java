@@ -1,16 +1,18 @@
 package pl.javastart.library.model;
 
+import pl.javastart.library.app.ArraysSum;
+
 public class Arrays {
-  public int[] array1 = {1, 2, 3};
-  public int[] array2 = {4, 5, 6};
 
-  static void main() {
-    Arrays arrays = new Arrays();
-    System.out.println(arrays.array1[0]+arrays.array1[1]+arrays.array1[2]+arrays.array2[0]+arrays.array2[1]+arrays.array2[2]);
+  public static void main() {
+    int[] array2 = {4, 5, 6};
+    int[] array1 = {1, 2, 3};
 
-    Arrays arrays1 = new Arrays();
+    System.out.println(array1[0]+array1[1]+array1[2]+array2[0]+array2[1]+array2[2]);
 
-    System.out.println(arrays1.array1.length + arrays1.array2.length);
+    ArraysSum arraysSum = new ArraysSum();
+
+    System.out.println(arraysSum.arraysSum(array1, array2));
   }
 }
 
