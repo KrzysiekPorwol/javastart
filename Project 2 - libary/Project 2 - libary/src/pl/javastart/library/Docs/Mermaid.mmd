@@ -1,0 +1,22 @@
+---
+config:
+  theme: dark
+  layout: fixed
+---
+flowchart TB
+    n1@{ shape: text, label: "Napisz program, który będzie wczytywał od użytkownika kolejne liczby całkowite. Wczytywanie liczb powinno zakończyć się w momencie, gdy użytkownik poda liczbę większą od 100. Jeżeli suma wszystkich wprowadzonych liczb mniejszych bądź równych 100 jest liczbą parzystą, to wyświetl komunikat: parzysta, a jeżeli nie, to: nieparzysta." }
+    n2@{ shape: start, label: "Start" }
+    n3@{ shape: text, label: "Ustaw suma = 0" }
+    n4@{ shape: lean-r, label: "Wczytaj liczbę całkowitą" }
+    n5@{ shape: diamond, label: "Czy liczba > 100?" }
+    n6@{ shape: rect, label: "suma = suma + liczba" }
+    n7@{ shape: diamond, label: "Czy suma jest parzysta?" }
+    n8@{ shape: text, label: "Wyświetl: parzysta" }
+    n9@{ shape: text, label: "Wyświetl: nieparzysta" }
+    n10@{ shape: framed-circle, label: "Koniec" }
+
+    n2 --> n3 --> n4 --> n5
+    n5 -->|Nie| n6 --> n4
+    n5 -->|Tak| n7
+    n7 -->|Tak| n8 --> n10
+    n7 -->|Nie| n9 --> n10
