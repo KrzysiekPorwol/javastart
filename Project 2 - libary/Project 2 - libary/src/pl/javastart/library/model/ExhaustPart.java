@@ -1,5 +1,13 @@
 package pl.javastart.library.model;
 
 public class ExhaustPart extends Part {
-  public boolean compliantWithEmissionStandards;
+  private boolean compliantWithEmissionStandards;
+
+  public boolean isCompliantWithEmissionStandards() {
+    return compliantWithEmissionStandards;
+  }
+
+  public void setCompliantWithEmissionStandards(boolean compliantWithEmissionStandards) {
+    this.compliantWithEmissionStandards = compliantWithEmissionStandards;
+  }
 }

@@ -8,20 +8,18 @@ public class PartApp {
   static void main() {
     ExhaustPart exhaustPart1 = new ExhaustPart();
 
-    exhaustPart1.idNumber = 1;
-    exhaustPart1.compliantWithEmissionStandards = true;
-    exhaustPart1.series = 1;
-    exhaustPart1.model = "DBKILLER";
-    exhaustPart1.producer = "Jo";
+    exhaustPart1.setModel("Ale");
+    exhaustPart1.setCompliantWithEmissionStandards(true);
 
     Part part1 = new Part();
-    part1.idNumber = 1;
 
-    Tire tire1 = new Tire();
+    part1.setModel("Vacum");
+    part1.setIdNumber(1);
 
-    tire1.width = 100;
-    tire1.size = 16;
+    Tire tire1 = new Tire(200,150);
 
-    System.out.print(exhaustPart1.model + " " + part1.idNumber + " " + tire1.size);
+    tire1.setSeries(5);
+
+    System.out.print(tire1.getSize() + " " + tire1.getWidth() + " " + tire1.getSeries() + " " + tire1.getIdNumber() + " " + tire1.getProducer());
   }
 }
