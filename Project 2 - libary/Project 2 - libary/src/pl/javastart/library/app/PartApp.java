@@ -16,7 +16,7 @@ public class PartApp {
     part1.setModel("Vacum");
     part1.setIdNumber(1);
 
-    Tire tire1 = new Tire(200,150);
+    Tire tire1 = new Tire(1, "Zdzichu", "Szybkie", 1, 100, 16);
 
     tire1.setSeries(5);
 

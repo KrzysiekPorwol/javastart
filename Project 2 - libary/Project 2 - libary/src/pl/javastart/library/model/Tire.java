@@ -4,7 +4,11 @@ public class Tire extends Part {
   private int width;
   private int size;
 
-  public Tire(int size, int width) {
+  public Tire(int idNumber, String producer, String model,int series, int width, int size) {
+    setIdNumber(idNumber);
+    setProducer(producer);
+    setModel(model);
+    setSeries(series);
     this.size = size;
     this.width = width;
   }
