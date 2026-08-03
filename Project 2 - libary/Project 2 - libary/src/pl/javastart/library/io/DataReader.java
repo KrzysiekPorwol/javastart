@@ -28,7 +28,7 @@ public class DataReader {
     System.out.print("Ilość stron: ");
     int pages = getInt();
 
-    return new Book(title, author, releaseDate, pages, publisher, isbn);
+    return new Book(publisher, releaseDate, title, author, pages, isbn);
   }
 
   public Magazine readAndCreateMagazine() {
@@ -45,6 +45,7 @@ public class DataReader {
     System.out.println("Dzień: ");
     int day = getInt();
 
-    return new Magazine(title, publisher, language, year, month, day);
+    return new Magazine(publisher, year, title, month, day, language);
+
   }
 }

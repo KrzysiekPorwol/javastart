@@ -5,6 +5,12 @@ public class Publication {
   private String title;
   private String publisher;
 
+  public Publication(String publisher, int year, String title) {
+    this.publisher = publisher;
+    this.year = year;
+    this.title = title;
+  }
+
   public int getYear() {
     return year;
   }
