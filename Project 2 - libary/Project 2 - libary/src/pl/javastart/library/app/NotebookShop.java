@@ -29,7 +29,7 @@ public class NotebookShop {
 
 //    System.out.println(dataStore.toString());
 
-    System.out.println(dataStore.computersInStore());
+//    System.out.println(dataStore.computersInStore());
 
     System.out.println(dataStore.checkAvailability(computer6));
 
