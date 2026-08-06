@@ -8,8 +8,6 @@ public class CurrencyExchangeOffice {
 
   static void main() {
 
-    System.out.println(Currency.values());
-
     for (Currency o : Currency.values()) {
       System.out.println(o.toString());
     }
@@ -18,11 +16,11 @@ public class CurrencyExchangeOffice {
 
     System.out.println("Wpisz kod waluty: (EUR, USD, GBP, CHF");
 
-    Currency currency = Currency.valueOf(input.nextLine());
+    Currency currency = Currency.valueOf(input.nextLine().toUpperCase());
 
     System.out.println("Wpisz kwotę do przeliczenia: ");
 
-    double sum = input.nextInt();
+    double sum = input.nextDouble();
 
     System.out.println(currency.changeInToZloty(sum));
     }
