@@ -54,4 +54,7 @@ public class DataReader {
 
     return new Magazine(title, publisher, language, year, month, day);
   }
+
+  public void close() {
+  }
 }
