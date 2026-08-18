@@ -1,6 +1,21 @@
 package pl.javastart.library.app;
 
+import pl.javastart.library.logic.file.ReadNumbers;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class App {
+
+  static void main() throws IOException {
+    ReadNumbers readNumbers = new ReadNumbers();
+
+    System.out.println(readNumbers.numbers());
+
+    System.out.println(readNumbers.bigNumbers());
+
+  }
+
 
 
 
