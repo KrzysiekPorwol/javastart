@@ -1,9 +1,62 @@
 package pl.javastart.library.app;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+
 public class App2 {
+
+  static void main() {
+
+    List<Integer> list = new ArrayList<>(12);
+    Random random = new Random();
+
+    Supplier<Integer> supplier = () -> random.nextInt(50) + 1;
+
+    for (int i = 0; i < 12; i++) {
+      list.add(supplier.get());
+    }
+
+    Consumer<Integer> consumer = (number) -> System.out.print(number + ", ");
+
+    for (int i = 0; i < list.size(); i++) {
+      consumer.accept(list.get(i));
+    }
+
+    Predicate<Integer> predicate = (number) -> number > 25;
+
+    System.out.println("");
+
+    numberGreaterThan25(list, predicate);
+
+    System.out.println("");
+
+    for (int i = 0; i < list.size(); i++) {
+      consumer.accept(list.get(i));
+    }
+
+  }
+
+  public static List<Integer> numberGreaterThan25(List<Integer> list, Predicate<Integer> predicate) {
+    Iterator<Integer> iterator = list.iterator();
+    int howMuchRemove = 0;
+    while (iterator.hasNext()) {
+
+      if (predicate.test(iterator.next())) {
+        iterator.remove();
+        howMuchRemove++;
+      }
+    }
+    System.out.print("Usunięto " + howMuchRemove + " liczb.");
+    return list;
+  }
+
+
 }
-
-
 
 
 //Zadanie
