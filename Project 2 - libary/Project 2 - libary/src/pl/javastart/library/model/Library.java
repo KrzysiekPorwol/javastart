@@ -62,4 +62,8 @@ public class Library implements Serializable {
             return false;
         }
     }
+
+    public Optional<Publication> findPublicationByTitle(String title) {
+        return Optional.ofNullable(publications.get(title));
+    }
 }
